@@ -2,7 +2,7 @@
 
 Prototipo funcional completo de **MedCitas**, una aplicación web progresiva (PWA) para gestión de citas médicas en Colombia. Este prototipo está diseñado para ser testeado en Maze y simula todas las funcionalidades de una aplicación real sin requerir backend.
 
-## 🚀 Características
+Características
 
 - ✅ **Autenticación completa**: Login y registro de usuarios
 - ✅ **Agendamiento de citas**: Flujo completo de 5 pasos (Especialidad → Fecha → Horario → Resumen → Confirmación)
@@ -12,7 +12,7 @@ Prototipo funcional completo de **MedCitas**, una aplicación web progresiva (PW
 - ✅ **Responsive**: Mobile-first design optimizado para dispositivos móviles
 - ✅ **Accesibilidad**: Cumple con WCAG 2.1 AA
 
-## 📋 Tecnologías
+Tecnologías
 
 - **React 18+** con hooks modernos
 - **Vite** como build tool
@@ -23,7 +23,7 @@ Prototipo funcional completo de **MedCitas**, una aplicación web progresiva (PW
 - **Lucide React** para iconos
 - **React Hot Toast** para notificaciones
 
-## 🛠️ Instalación
+Instalación
 
 ```bash
 # 1. Instalar dependencias
@@ -39,7 +39,7 @@ npm run build
 npm run preview
 ```
 
-## 🔐 Credenciales de Prueba
+Credenciales de Prueba
 
 Para testing en Maze, usa las siguientes credenciales:
 
@@ -50,7 +50,7 @@ Contraseña: demo123
 
 Este usuario tiene **2 citas pre-cargadas** para testear las funcionalidades de visualización, detalle y cancelación de citas.
 
-## 📱 Estructura del Proyecto
+Estructura del Proyecto
 
 ```
 medcitas-prototype/
@@ -73,7 +73,7 @@ medcitas-prototype/
 └── package.json
 ```
 
-## 🎯 Flujos de Usuario
+Flujos de Usuario
 
 ### 1. Registro e Inicio de Sesión
 - Registro completo con validaciones en tiempo real
@@ -92,7 +92,7 @@ medcitas-prototype/
 - Vista de detalle completo
 - Cancelación de citas con motivo opcional
 
-## 🧪 Testing en Maze
+Testing en Maze
 
 ### Tareas Sugeridas
 
@@ -121,7 +121,7 @@ medcitas-prototype/
    - Confirmar cancelación
    - Ver confirmación de cancelación exitosa
 
-## 📦 Datos Mock
+ Datos Mock
 
 El prototipo incluye:
 - **3 usuarios de prueba** (incluyendo usuario demo)
@@ -130,20 +130,20 @@ El prototipo incluye:
 - **2 citas pre-cargadas** para el usuario demo
 - **Fechas y horarios disponibles** generados dinámicamente
 
-## 🎨 Paleta de Colores (Material Design)
+Paleta de Colores (Material Design)
 
 - **Primary**: #2196F3 (Azul médico)
 - **Success**: #4CAF50 (Verde confirmaciones)
 - **Error**: #F44336 (Rojo errores/cancelaciones)
 - **Warning**: #FF9800 (Naranja advertencias)
 
-## 📱 Responsive Design
+Responsive Design
 
 - **Mobile (360px - 640px)**: Layout single column, full-width
 - **Tablet (641px - 1024px)**: Layout centrado con max-width 600px
 - **Desktop (1025px+)**: Layout centrado con max-width 480px (simula móvil)
 
-## ♿ Accesibilidad
+Accesibilidad
 
 - Contraste mínimo 4.5:1 para texto normal
 - Elementos táctiles mínimo 44x44px
@@ -151,7 +151,7 @@ El prototipo incluye:
 - Atributos ARIA en componentes interactivos
 - Labels asociados correctamente a inputs
 
-## 🚢 Deployment
+Deployment
 
 El prototipo está listo para deployment en:
 
@@ -161,14 +161,14 @@ El prototipo está listo para deployment en:
 
 URL de deployment recomendada para Maze: `https://medcitas-prototype.vercel.app`
 
-## 📝 Notas Importantes
+Notas Importantes
 
 - **NO hay backend real**: Todo está simulado con `mockApi.js`
 - **Los datos persisten en localStorage**: Las citas creadas se guardan localmente
 - **Latencia simulada**: Las llamadas API tienen delay de 200-500ms para simular red real
 - **Credenciales visibles**: El usuario demo y sus credenciales están visibles en la página de login
 
-## 🐛 Troubleshooting
+Troubleshooting
 
 ### Error: "Cannot find module"
 ```bash
@@ -186,15 +186,7 @@ npm run build
 - Verificar que el navegador tenga localStorage habilitado
 - En modo incógnito, algunos navegadores limitan localStorage
 
-## 📄 Licencia
+Licencia
 
 Este es un prototipo funcional para testing y demostración.
-
-## 👥 Créditos
-
-Desarrollado como prototipo funcional para validación de concepto y testing de usabilidad con Maze.
-
----
-
-**¡Éxito en el testing! 🚀**
 
