@@ -151,16 +151,6 @@ Accesibilidad
 - Atributos ARIA en componentes interactivos
 - Labels asociados correctamente a inputs
 
-Deployment
-
-El prototipo está listo para deployment en:
-
-- **Vercel**: `vercel --prod`
-- **Netlify**: Arrastrar carpeta `dist/` después de `npm run build`
-- **GitHub Pages**: Configurar en settings del repositorio
-
-URL de deployment recomendada para Maze: `https://medcitas-prototype.vercel.app`
-
 Notas Importantes
 
 - **NO hay backend real**: Todo está simulado con `mockApi.js`
@@ -189,4 +179,5 @@ npm run build
 Licencia
 
 Este es un prototipo funcional para testing y demostración.
+
 
