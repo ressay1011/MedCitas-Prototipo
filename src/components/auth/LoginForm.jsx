@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Mail, Lock } from 'lucide-react';
+import { Mail, Lock, ArrowRight } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { mockApi } from '../../services/mockApi';
 import Button from '../common/Button';
 import Input from '../common/Input';
 import { validateEmail, validatePassword } from '../../utils/validators';
 import toast from 'react-hot-toast';
+import { Heart } from 'lucide-react';
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -64,12 +65,16 @@ const LoginForm = () => {
 
   return (
     <div className="w-full max-w-md mx-auto px-4">
-      <div className="mb-8">
-        <h1 className="text-2xl font-medium text-textPrimary mb-2">
-          Iniciar sesión
+      {/* Logo y branding */}
+      <div className="flex flex-col items-center mb-8">
+        <div className="w-20 h-20 rounded-full bg-[#BBDEFB] flex items-center justify-center mb-4">
+          <Heart size={40} className="text-white fill-white" />
+        </div>
+        <h1 className="text-3xl font-medium text-primary mb-1">
+          MedCitas
         </h1>
-        <p className="text-textSecondary">
-          Ingresa tus credenciales para continuar
+        <p className="text-base text-textPrimary">
+          Tu salud, siempre a tiempo
         </p>
       </div>
 
@@ -94,7 +99,7 @@ const LoginForm = () => {
           value={formData.email}
           onChange={handleChange}
           error={errors.email}
-          placeholder="tu@email.com"
+          placeholder="Ejemplo@correo.com"
           required
           icon={Mail}
           disabled={loading}
@@ -125,8 +130,12 @@ const LoginForm = () => {
           fullWidth
           loading={loading}
           disabled={loading}
+          className="flex items-center justify-center"
         >
-          Iniciar sesión
+          INICIAR SESIÓN
+          <div className="ml-2 w-6 h-6 rounded-full bg-white bg-opacity-30 flex items-center justify-center">
+            <ArrowRight size={14} className="text-white" />
+          </div>
         </Button>
       </form>
 
@@ -135,7 +144,7 @@ const LoginForm = () => {
           ¿No tienes cuenta?{' '}
           <Link
             to="/register"
-            className="text-primary font-medium hover:underline"
+            className="text-primary font-medium underline"
           >
             Regístrate
           </Link>

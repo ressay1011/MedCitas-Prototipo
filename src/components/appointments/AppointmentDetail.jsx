@@ -88,7 +88,7 @@ const AppointmentDetail = ({ appointment }) => {
               <CheckCircle2 size={32} className="text-success" />
             )}
             <div>
-              <h1 className="text-xl font-medium text-textPrimary">
+              <h1 className="text-xl font-bold text-textPrimary">
                 Cita #{appointment.codigoUnico?.split('-').pop() || appointment.id}
               </h1>
               <p className="text-sm text-textSecondary">
@@ -109,15 +109,15 @@ const AppointmentDetail = ({ appointment }) => {
       </Card>
 
       {/* Información detallada */}
-      <Card className="p-6 space-y-4">
+      <Card variant="light" className="p-6 space-y-4">
         {/* Especialidad y Doctor */}
         <div className="flex items-start space-x-3">
-          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primaryLight flex items-center justify-center">
+          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primaryLight flex items-center justify-center">
             <User size={20} className="text-primary" />
           </div>
           <div className="flex-1">
             <p className="text-sm text-textSecondary">Especialidad</p>
-            <p className="text-base font-medium text-textPrimary">
+            <p className="text-base font-bold text-textPrimary">
               {appointment.especialidadNombre || appointment.especialidad?.nombre || 'No especificada'}
             </p>
             {appointment.doctorNombre && (
@@ -130,12 +130,12 @@ const AppointmentDetail = ({ appointment }) => {
 
         {/* Fecha */}
         <div className="flex items-start space-x-3">
-          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primaryLight flex items-center justify-center">
+          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primaryLight flex items-center justify-center">
             <Calendar size={20} className="text-primary" />
           </div>
           <div className="flex-1">
             <p className="text-sm text-textSecondary">Fecha</p>
-            <p className="text-base font-medium text-textPrimary capitalize">
+            <p className="text-base font-bold text-textPrimary capitalize">
               {appointment.fecha ? formatFullDate(appointment.fecha) : 'No especificada'}
             </p>
           </div>
@@ -143,12 +143,12 @@ const AppointmentDetail = ({ appointment }) => {
 
         {/* Hora */}
         <div className="flex items-start space-x-3">
-          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primaryLight flex items-center justify-center">
+          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primaryLight flex items-center justify-center">
             <Clock size={20} className="text-primary" />
           </div>
           <div className="flex-1">
             <p className="text-sm text-textSecondary">Hora</p>
-            <p className="text-base font-medium text-textPrimary">
+            <p className="text-base font-bold text-textPrimary">
               {appointment.hora ? formatTime(appointment.hora) : 'No especificada'}
             </p>
           </div>
@@ -157,12 +157,12 @@ const AppointmentDetail = ({ appointment }) => {
         {/* Ubicación */}
         {appointment.consultorio && (
           <div className="flex items-start space-x-3">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primaryLight flex items-center justify-center">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primaryLight flex items-center justify-center">
               <MapPin size={20} className="text-primary" />
             </div>
             <div className="flex-1">
-              <p className="text-sm text-textSecondary">Consultorio</p>
-              <p className="text-base font-medium text-textPrimary">
+              <p className="text-sm text-textSecondary">Ubicación</p>
+              <p className="text-base font-bold text-textPrimary">
                 {appointment.consultorio}
               </p>
             </div>
@@ -212,7 +212,7 @@ const AppointmentDetail = ({ appointment }) => {
       {showCancelModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-end justify-center z-50 p-4">
           <Card className="w-full max-w-md p-6 max-h-[80vh] overflow-y-auto">
-            <h3 className="text-lg font-medium text-textPrimary mb-2">
+            <h3 className="text-lg font-bold text-textPrimary mb-2">
               ¿Cancelar esta cita?
             </h3>
             <p className="text-sm text-textSecondary mb-4">

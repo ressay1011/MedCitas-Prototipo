@@ -26,7 +26,7 @@ const AppointmentList = ({ appointments }) => {
         <div className="w-16 h-16 rounded-full bg-backgroundGray flex items-center justify-center mb-4">
           <Calendar size={32} className="text-textSecondary" />
         </div>
-        <p className="text-lg font-medium text-textPrimary mb-2">
+        <p className="text-lg font-bold text-textPrimary mb-2">
           No tienes citas programadas
         </p>
         <p className="text-sm text-textSecondary text-center">
@@ -41,7 +41,7 @@ const AppointmentList = ({ appointments }) => {
       {/* Próximas citas */}
       {upcomingAppointments.length > 0 && (
         <div>
-          <h2 className="text-lg font-medium text-textPrimary mb-4">
+          <h2 className="text-lg font-bold text-textPrimary mb-4">
             Próximas citas
           </h2>
           <div className="space-y-4">
@@ -55,7 +55,7 @@ const AppointmentList = ({ appointments }) => {
       {/* Historial */}
       {(pastAppointments.length > 0 || cancelledAppointments.length > 0) && (
         <div>
-          <h2 className="text-lg font-medium text-textPrimary mb-4">
+          <h2 className="text-lg font-bold text-textPrimary mb-4">
             Historial
           </h2>
           <div className="space-y-4">

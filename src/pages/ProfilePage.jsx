@@ -18,11 +18,11 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-backgroundGray pb-20">
+    <div className="min-h-screen bg-white pb-20">
       {/* Header */}
       <div className="bg-primary text-white p-6 pb-8">
         <div className="max-w-lg mx-auto">
-          <h1 className="text-2xl font-medium mb-2">
+          <h1 className="text-2xl font-bold mb-2">
             Mi perfil
           </h1>
           <p className="text-primaryLight">
@@ -34,13 +34,13 @@ const ProfilePage = () => {
       {/* Contenido */}
       <div className="max-w-lg mx-auto px-4 -mt-4">
         {/* Información del usuario */}
-        <Card className="p-6 mb-6">
+        <Card variant="light" className="p-6 mb-6">
           <div className="flex items-center space-x-4 mb-6">
-            <div className="w-16 h-16 rounded-full bg-primaryLight flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
               <User size={32} className="text-primary" />
             </div>
             <div className="flex-1">
-              <h2 className="text-xl font-medium text-textPrimary">
+              <h2 className="text-xl font-bold text-textPrimary">
                 {user?.nombre || 'Usuario'}
               </h2>
               <p className="text-sm text-textSecondary">
@@ -52,12 +52,12 @@ const ProfilePage = () => {
           <div className="space-y-4">
             {/* Email */}
             <div className="flex items-start space-x-3">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-backgroundGray flex items-center justify-center">
-                <Mail size={20} className="text-textSecondary" />
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center">
+                <Mail size={20} className="text-primary" />
               </div>
               <div className="flex-1">
                 <p className="text-sm text-textSecondary">Correo electrónico</p>
-                <p className="text-base font-medium text-textPrimary">
+                <p className="text-base font-bold text-textPrimary">
                   {user?.email || 'No especificado'}
                 </p>
               </div>
@@ -66,12 +66,12 @@ const ProfilePage = () => {
             {/* Teléfono */}
             {user?.telefono && (
               <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-backgroundGray flex items-center justify-center">
-                  <Phone size={20} className="text-textSecondary" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center">
+                  <Phone size={20} className="text-primary" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-textSecondary">Teléfono</p>
-                  <p className="text-base font-medium text-textPrimary">
+                  <p className="text-base font-bold text-textPrimary">
                     {user.telefono}
                   </p>
                 </div>
@@ -81,12 +81,12 @@ const ProfilePage = () => {
             {/* Documento */}
             {user?.documento && (
               <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-backgroundGray flex items-center justify-center">
-                  <FileText size={20} className="text-textSecondary" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center">
+                  <FileText size={20} className="text-primary" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-textSecondary">Número de documento</p>
-                  <p className="text-base font-medium text-textPrimary">
+                  <p className="text-base font-bold text-textPrimary">
                     {user.documento}
                   </p>
                 </div>
@@ -96,12 +96,12 @@ const ProfilePage = () => {
             {/* Fecha de nacimiento */}
             {user?.fechaNacimiento && (
               <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-backgroundGray flex items-center justify-center">
-                  <Calendar size={20} className="text-textSecondary" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center">
+                  <Calendar size={20} className="text-primary" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-textSecondary">Fecha de nacimiento</p>
-                  <p className="text-base font-medium text-textPrimary">
+                  <p className="text-base font-bold text-textPrimary">
                     {formatDate(user.fechaNacimiento, 'dd/MM/yyyy')}
                   </p>
                 </div>

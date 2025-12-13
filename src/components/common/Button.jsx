@@ -28,7 +28,7 @@ const Button = ({
 
   const variantStyles = {
     primary: `
-      bg-primary text-white
+      bg-primary text-white uppercase font-medium
       hover:bg-primaryDark
       active:bg-primaryDark
       focus:ring-primary

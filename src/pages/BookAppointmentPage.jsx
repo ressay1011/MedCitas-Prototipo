@@ -12,7 +12,7 @@ import BottomNavigation from '../components/common/BottomNavigation';
 import { mockApi } from '../services/mockApi';
 import { MOCK_SPECIALTIES } from '../data/mockSpecialties';
 import { MOCK_DOCTORS } from '../data/mockDoctors';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const TOTAL_STEPS = 5;
@@ -179,33 +179,51 @@ const BookAppointmentPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-backgroundGray pb-20">
+    <div className="min-h-screen bg-white pb-20">
       {/* Header con progreso */}
       <div className="bg-white border-b border-border sticky top-0 z-10">
         <div className="max-w-lg mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-2">
-            <button
-              onClick={handleBack}
-              className="text-textPrimary hover:text-primary transition-colors"
-              aria-label="Atrás"
-            >
-              ← Atrás
-            </button>
-            <span className="text-sm text-textSecondary">
-              Paso {step} de {TOTAL_STEPS}
-            </span>
+            {step === 1 ? (
+              <>
+                <h2 className="text-lg font-bold text-textPrimary">Especialidades disponibles</h2>
+                <button
+                  onClick={handleBack}
+                  className="w-8 h-8 rounded-full bg-error flex items-center justify-center text-white"
+                  aria-label="Cerrar"
+                >
+                  <span className="text-lg font-bold">×</span>
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={handleBack}
+                  className="text-textPrimary hover:text-primary transition-colors"
+                  aria-label="Atrás"
+                >
+                  ← Atrás
+                </button>
+                <span className="text-sm text-textSecondary">
+                  Paso {step} de {TOTAL_STEPS}
+                </span>
+              </>
+            )}
           </div>
-          <h1 className="text-xl font-medium text-textPrimary">
-            {getStepTitle()}
-          </h1>
-
-          {/* Progress bar */}
-          <div className="mt-4 h-2 bg-backgroundGray rounded-full overflow-hidden">
-            <div
-              className="h-full bg-primary transition-all duration-300"
-              style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
-            />
-          </div>
+          {step !== 1 && (
+            <>
+              <h1 className="text-xl font-bold text-textPrimary">
+                {getStepTitle()}
+              </h1>
+              {/* Progress bar */}
+              <div className="mt-4 h-2 bg-backgroundGray rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-primary transition-all duration-300"
+                  style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
+                />
+              </div>
+            </>
+          )}
         </div>
       </div>
 
@@ -272,7 +290,7 @@ const BookAppointmentPage = () => {
             <div className="w-20 h-20 rounded-full bg-success bg-opacity-20 flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 size={48} className="text-success" />
             </div>
-            <h2 className="text-2xl font-medium text-textPrimary mb-2">
+            <h2 className="text-2xl font-bold text-textPrimary mb-2">
               ¡Cita confirmada!
             </h2>
             <p className="text-textSecondary mb-8">
@@ -352,8 +370,12 @@ const BookAppointmentPage = () => {
               fullWidth
               onClick={handleNext}
               disabled={!canContinue() || loading || loadingSlots}
+              className="flex items-center justify-center"
             >
-              Continuar
+              CONTINUAR
+              <div className="ml-2 w-6 h-6 rounded-full bg-white bg-opacity-30 flex items-center justify-center">
+                <ArrowRight size={14} className="text-white" />
+              </div>
             </Button>
           </div>
         )}

@@ -42,11 +42,11 @@ const MyAppointmentsPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-backgroundGray pb-20">
+    <div className="min-h-screen bg-white pb-20">
       {/* Header */}
       <div className="bg-white border-b border-border sticky top-0 z-10">
         <div className="max-w-lg mx-auto px-4 py-4">
-          <h1 className="text-xl font-medium text-textPrimary">
+          <h1 className="text-xl font-bold text-textPrimary">
             Mis citas
           </h1>
         </div>

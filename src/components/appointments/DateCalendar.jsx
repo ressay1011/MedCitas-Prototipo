@@ -49,7 +49,7 @@ const DateCalendar = ({ availableDates, selectedDate, onSelectDate }) => {
           <ChevronLeft size={20} />
         </button>
         
-        <h3 className="text-lg font-medium text-textPrimary capitalize">
+        <h3 className="text-lg font-bold text-textPrimary capitalize">
           {format(currentMonth, 'MMMM yyyy', { locale: es })}
         </h3>
         

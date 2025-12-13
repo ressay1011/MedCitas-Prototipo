@@ -1,17 +1,19 @@
-// Paleta de colores Material Design
+// Paleta de colores Material Design - Actualizada según diseño
 export const COLORS = {
-  primary: '#2196F3',      // Azul médico principal
-  primaryDark: '#1976D2',  // Azul oscuro para hover
-  primaryLight: '#BBDEFB', // Azul claro para fondos
+  primary: '#0080FF',      // Azul principal (botones)
+  primaryDark: '#0066CC',  // Azul oscuro para hover
+  primaryLight: '#BBDEFB', // Azul claro para fondos/cards
   success: '#4CAF50',      // Verde confirmaciones
   error: '#F44336',        // Rojo errores/cancelaciones
   warning: '#FF9800',      // Naranja advertencias
-  textPrimary: '#212121',  // Texto principal
-  textSecondary: '#757575',// Texto secundario
+  textPrimary: '#000000',  // Texto principal (negro)
+  textSecondary: '#757575',// Texto secundario (gris)
   background: '#FFFFFF',   // Fondo principal
   backgroundGray: '#F5F5F5', // Fondo secundario
+  cardBackground: '#BBDEFB', // Fondo de cards (azul claro)
   border: '#E0E0E0',       // Bordes
-  disabled: '#BDBDBD'      // Elementos deshabilitados
+  disabled: '#9E9E9E',     // Elementos deshabilitados
+  darkGray: '#424242'      // Gris oscuro
 };
 
 export const TYPOGRAPHY = {

@@ -23,7 +23,7 @@ const RegisterPage = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-backgroundGray py-8 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-white py-8 px-4">
       <RegisterForm />
     </div>
   );

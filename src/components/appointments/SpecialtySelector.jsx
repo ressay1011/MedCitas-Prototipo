@@ -22,14 +22,6 @@ const SpecialtySelector = ({ selectedSpecialty, onSelect }) => {
 
   return (
     <div className="w-full space-y-4">
-      <Input
-        type="text"
-        placeholder="Buscar especialidad..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        icon={Search}
-      />
-
       <div className="space-y-3">
         {filteredSpecialties.map((specialty) => {
           const Icon = iconMap[specialty.icono] || Stethoscope;
@@ -39,43 +31,36 @@ const SpecialtySelector = ({ selectedSpecialty, onSelect }) => {
             <Card
               key={specialty.id}
               onClick={() => onSelect(specialty)}
+              variant="light"
               className={`
                 cursor-pointer
                 transition-all duration-200
-                ${isSelected 
-                  ? 'border-2 border-primary bg-primaryLight' 
-                  : 'border border-border hover:border-primary'}
+                ${isSelected
+                  ? 'border-2 border-primary'
+                  : 'border border-border'}
               `}
             >
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center justify-between">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-medium text-textPrimary">
+                    {specialty.nombre}
+                  </h3>
+                </div>
                 <div className={`
                   flex-shrink-0
-                  w-12 h-12
+                  w-6 h-6
                   rounded-full
+                  border-2
                   flex items-center justify-center
-                  ${isSelected ? 'bg-primary text-white' : 'bg-backgroundGray text-textPrimary'}
+                  ml-4
+                  ${isSelected 
+                    ? 'border-primary bg-primary' 
+                    : 'border-textSecondary bg-white'}
                   transition-colors duration-200
                 `}>
-                  <Icon size={24} />
-                </div>
-
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center space-x-2">
-                    <h3 className={`
-                      text-lg font-medium
-                      ${isSelected ? 'text-primary' : 'text-textPrimary'}
-                    `}>
-                      {specialty.nombre}
-                    </h3>
-                    {isSelected && (
-                      <div className="w-5 h-5 rounded-full bg-primary border-2 border-white flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-white"></div>
-                      </div>
-                    )}
-                  </div>
-                  <p className="text-sm text-textSecondary mt-0.5">
-                    {specialty.descripcion}
-                  </p>
+                  {isSelected && (
+                    <div className="w-3 h-3 rounded-full bg-white"></div>
+                  )}
                 </div>
               </div>
             </Card>

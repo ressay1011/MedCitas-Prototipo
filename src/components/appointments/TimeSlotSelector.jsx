@@ -5,7 +5,7 @@ const TimeSlotSelector = ({ fecha, doctor, slots, selectedTime, onSelectTime }) 
     <div className="w-full space-y-4">
       {/* Header */}
       <div className="mb-4">
-        <h3 className="text-lg font-medium text-textPrimary mb-1">
+        <h3 className="text-lg font-bold text-textPrimary mb-1">
           Horarios disponibles
         </h3>
         {fecha && (

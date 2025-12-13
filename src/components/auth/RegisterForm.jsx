@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Mail, Lock, User, FileText, Phone, Calendar } from 'lucide-react';
+import { Mail, Lock, User, FileText, Phone, Calendar, Heart, UserPlus } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { mockApi } from '../../services/mockApi';
 import Button from '../common/Button';
@@ -107,7 +107,7 @@ const RegisterForm = () => {
   return (
     <div className="w-full max-w-md mx-auto px-4">
       <div className="mb-8">
-        <h1 className="text-2xl font-medium text-textPrimary mb-2">
+        <h1 className="text-2xl font-bold text-textPrimary mb-2">
           Crear cuenta
         </h1>
         <p className="text-textSecondary">
@@ -224,8 +224,12 @@ const RegisterForm = () => {
           fullWidth
           loading={loading}
           disabled={loading}
+          className="flex items-center justify-center"
         >
-          Crear cuenta
+          CREAR CUENTA
+          <div className="ml-2 w-6 h-6 rounded-full bg-white bg-opacity-30 flex items-center justify-center">
+            <UserPlus size={14} className="text-white" />
+          </div>
         </Button>
       </form>
 
@@ -234,9 +238,9 @@ const RegisterForm = () => {
           ¿Ya tienes cuenta?{' '}
           <Link
             to="/login"
-            className="text-primary font-medium hover:underline"
+            className="text-primary font-medium underline"
           >
-            Inicia sesión
+            Inicia Sesión
           </Link>
         </p>
       </div>
