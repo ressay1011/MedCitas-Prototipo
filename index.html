@@ -1,28 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#2196F3" />
-  <meta name="description" content="MedCitas - Gestión de citas médicas simplificada" />
-  
-  <!-- Open Graph para previews -->
-  <meta property="og:title" content="MedCitas - Prototipo" />
-  <meta property="og:description" content="Prototipo funcional de aplicación de citas médicas" />
-  <meta property="og:type" content="website" />
-  
-  <title>MedCitas - Tu salud, siempre a tiempo</title>
-  
-  <!-- Fuente Roboto -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
-  <link rel="manifest" href="/manifest.json" />
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#2196F3" />
+    <meta
+      name="description"
+      content="MedCitas - Gestión de citas médicas simplificada"
+    />
 
+    <!-- Open Graph para previews -->
+    <meta property="og:title" content="MedCitas - Prototipo" />
+    <meta
+      property="og:description"
+      content="Prototipo funcional de aplicación de citas médicas"
+    />
+    <meta property="og:type" content="website" />
+
+    <title>MedCitas - Tu salud, siempre a tiempo</title>
+
+    <!-- Fuente Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+      (function (m, a, z, e) {
+        var s, t, u, v;
+        try {
+          t = m.sessionStorage.getItem("maze-us");
+        } catch (err) {}
+
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m.sessionStorage.setItem("maze-us", t);
+          } catch (err) {}
+        }
+
+        u =
+          document.currentScript ||
+          (function () {
+            var w = document.getElementsByTagName("script");
+            return w[w.length - 1];
+          })();
+        v = u && u.nonce;
+
+        s = a.createElement("script");
+        s.src = z + "?apiKey=" + e;
+        s.async = true;
+        if (v) s.setAttribute("nonce", v);
+        a.getElementsByTagName("head")[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(
+        window,
+        document,
+        "https://snippet.maze.co/maze-universal-loader.js",
+        "c23d613e-7a8c-403b-9f7d-9b10e018ab2e"
+      );
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
